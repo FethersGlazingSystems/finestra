@@ -1,0 +1,13 @@
+name: finestra
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pandas
+  - xarray
+  - numpy
+  - panel
+  - altair
+  - openpyxl
+  - jupyterlab
+  - matplotlib
