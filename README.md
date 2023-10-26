@@ -38,7 +38,23 @@ Download and install a Python distribution
 - [Miniforge](https://github.com/conda-forge/miniforge) with mamba is recommended
 - Choose installer appropriate to your OS (e.g. Windows x86_64)
 
+Clone this repository (e.g. download and unzip)
+
+![how to clone repository](docs/finestra-download-zip.png)
+
+Start miniforge shell by typing
+    
+    {Win} miniforge {ENTER}
+
+Navigate to the folder containing the code for this repository
+
+    cd c:\Users\<username>\Downloads\finestra
+
 Setup conda environment (e.g. named finestra) via the ```requirements.yml```
+
+    mamba env create -n finestra -f requirements.yml
+    
+Note that mamba is available in Miniforge from version 23.3.1, for older distributions use
 
     conda env create -n finestra -f requirements.yml
 
@@ -48,6 +64,14 @@ Start miniforge shell by typing ```Win miniforge``` then run the following comma
     call C:\ProgramData\Miniconda3\condabin\conda.bat activate finestra
 
     panel serve deflection_chart.ipynb --port=<port> --allow-websocket-origin=<address>:<port> --address=<address> --prefix=finestra
+
+Create Firewall Inbound Rules to allow connections with the following parameters:
+- Programs: 
+    - C:\Users\<username>\AppData\Local\miniforge3\envs\finestra\python.exe 
+    - C:\Users\<username>\AppData\Local\miniforge3\python.exe
+- Protocols:
+    - TCP
+    - UDP
 
 
 ## References

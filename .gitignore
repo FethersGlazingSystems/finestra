@@ -1,3 +1,6 @@
+# Custom ignore
+test.bat
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
